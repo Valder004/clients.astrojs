@@ -9,7 +9,4 @@ export default defineConfig({
     mode: "standalone"
   }),
 
-  integrations: [
-    auth()
-  ]
 });
