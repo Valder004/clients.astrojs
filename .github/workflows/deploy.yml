@@ -19,7 +19,7 @@ jobs:
 
       - name: Deploy to VPS via SSH
         run: |
-          ssh -o StrictHostKeyChecking=no etudiant@clients.valentin-deroo.fr << 'EOF'
+          ssh -A -o StrictHostKeyChecking=no etudiant@clients.valentin-deroo.fr << 'EOF'
             cd ~/clients.astrojs
             git pull
             bun install
