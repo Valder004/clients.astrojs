@@ -19,7 +19,7 @@ jobs:
 
       - name: Deploy to VPS via SSH
         run: |
-          ssh -o StrictHostKeyChecking=no etudiant@clients.valentin-deroo.fr << 'EOF'
+          ssh -p 23054 -o StrictHostKeyChecking=no etudiant@185.157.244.202 << 'EOF'
             set -e
             export PATH="$HOME/.bun/bin:$PATH"
             cd ~/clients.astrojs
