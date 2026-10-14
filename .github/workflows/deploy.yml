@@ -19,7 +19,9 @@ jobs:
 
       - name: Deploy to VPS via SSH
         run: |
-          ssh -A -o StrictHostKeyChecking=no etudiant@clients.valentin-deroo.fr << 'EOF'
+          ssh -o StrictHostKeyChecking=no etudiant@clients.valentin-deroo.fr << 'EOF'
+            set -e
+            export PATH="$HOME/.bun/bin:$PATH"
             cd ~/clients.astrojs
             git pull
             bun install
